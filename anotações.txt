@@ -13,6 +13,22 @@ aula 29{
 aula 31{
    & = copia o elemento de cima 
 }
+aula 32{
+    arquitetura sass
+    base{
+        _base
+        _animation
+        _typography
+        _utilities
+    }
+    main{
+        @import "base/base";
+        @import "base/animation";
+        @import "base/typography";
+        @import "base/utilities";
+    }
+     **É preciso dividir em arquivos, muito utilizado em sites gigantes
+}
 
 
 
