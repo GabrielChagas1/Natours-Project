@@ -1,0 +1,14 @@
+Aula 28{
+    Aprendendo a usar o scss
+
+    "compile:sass": "node-sass sass/main.scss css/style.css -w" //comando criado para fazer a conversão automática de scss para o css 
+    npm run <nome do script> comando para começar a utilizar o sass //npm run compile:sass
+}
+
+aula 29{
+    Aprendendo a configurar o live-reload
+    comando: live-server
+}
+
+
+
