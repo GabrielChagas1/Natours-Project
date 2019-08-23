@@ -10,5 +10,9 @@ aula 29{
     comando: live-server
 }
 
+aula 31{
+   & = copia o elemento de cima 
+}
+
 
 

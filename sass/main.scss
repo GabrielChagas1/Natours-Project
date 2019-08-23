@@ -3,6 +3,9 @@ $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 $color-gray-dark: #777; 
 $color-white: #fff;
+$color-black: #000;
+
+
 
 *,
 *::after,
@@ -27,18 +30,17 @@ body{
     background-size: cover;
     background-position: top;
     position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    &_logo-box{
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+    &_logo{
+        height: 3.5rem;
+    }
 }
 
-.logo-box{
-    position: absolute;
-    top: 40px;
-    left: 40px;
-}
-
-.logo{
-    height: 35px;
-}
 
 .text-box{
     position: absolute;
@@ -52,81 +54,71 @@ body{
     color: $color-white;
     text-transform: uppercase;
     backface-visibility: hidden;
+    &-main{
+        display: block;
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: 35px;
+        animation: moveInLeft 2s;
+    }
+    &-sub{
+        display: block;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 60px;
+        letter-spacing: 17.4px;
+        animation: moveInRight 2s;
+    }
 }
 
-.heading-primary-main{
-    display: block;
-    font-size: 60px;
-    font-weight: 700;
-    letter-spacing: 35px;
-    animation: moveInLeft 2s;
+.btn{
+    &:link,
+    &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s;
+        position: relative;
+    }
+    &::after{
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-radius: 100px;
+        position: absolute; 
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    &-white{
+        background: $color-white;
+        color: $color-gray-dark;
+        &:hover{
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba($color-black, .2);
+            &::after{
+                transform: scaleX(1.5) scaleY(1.7);
+                opacity: 0;
+            }
+        }
+        &:active{
+            transform: translateY(1px);
+            box-shadow: 0 5px 10px rgba($color-black, .2);
+        }
+        &::after{
+            background: $color-white;
+        }
+        .text-box &{
+            animation: moveInBottom 2s ease-out .75s;
+            animation-fill-mode: backwards;
+        }
+    }
 }
 
-.heading-primary-sub{
-    display: block;
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 60px;
-    letter-spacing: 17.4px;
-    animation: moveInRight 2s;
-}
-
-.btn:link,
-.btn:visited{
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 15px 40px;
-    display: inline-block;
-    border-radius: 100px;
-    transition: all .2s;
-    position: relative;
-}
-
-.btn-white{
-    background: $color-white;
-    color: $color-gray-dark;
-    
-}
-
-.text-box .btn-white{
-    animation: moveInBottom 2s ease-out .75s;
-    animation-fill-mode: backwards;
-}
-
-.btn-white:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
-}
-
-.btn-white:active{
-    transform: translateY(1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-}
-
-.btn::after{
-    content: '';
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    border-radius: 100px;
-    position: absolute; 
-
-    
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
-
-.btn-white::after{
-    background: $color-white;
-}
-
-.btn-white:hover::after{
-    transform: scaleX(1.5) scaleY(1.7);
-    opacity: 0;
-
-}
 
 /* Animações Header */
 
