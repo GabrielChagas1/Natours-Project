@@ -30,5 +30,28 @@ aula 32{
      **É preciso dividir em arquivos, muito utilizado em sites gigantes
 }
 
+aula 33{
+    Basico do responsivo e do design
+
+    1 => Grids e Layout Fluidos{
+        1 - Float Layout
+        2 - Flexbox
+        3 - Grid Layout
+    }
+    2 => Imagens Responsivas
+    3 => Media Queries
+}
+
+aula 34{
+    10px => 1rem;
+    max-width -> se o viewport tiver menos que o valor passado ele preenche em 100% do espaço disponível;
+    not(:last-child) -> faz o estilo em todos os elementos a não ser no último elemento
+    [atributo] -> estiliza todos os elementos que contêm aquele atributo{
+        exemplo{
+            [class^="col-"] -> estiliza todos os elementos que começam com "col-"
+        }
+    }
+
+}
 
 
