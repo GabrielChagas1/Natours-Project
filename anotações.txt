@@ -51,7 +51,9 @@ aula 34{
             [class^="col-"] -> estiliza todos os elementos que começam com "col-"
         }
     }
-
+}
+aula 35{
+    
 }
 
 
