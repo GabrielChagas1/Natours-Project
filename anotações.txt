@@ -126,6 +126,11 @@ aula 34{
 }
 aula 35{
     
+}   
+
+aula 40{
+    unplash -> site para pegar imagens free;
+    background-blend-mode: screen; -> usado para mesclar imagens de fundos com o gradient-linear
 }
 
 
