@@ -5,3 +5,11 @@
         clear: both;
     }
 }
+
+//mixin criado para centralizar elementos tanto na horizontal quanto na vertical
+@mixin centerXY{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
